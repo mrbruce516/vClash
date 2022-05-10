@@ -5,7 +5,7 @@
 
 # 个人修改部分
 
-使用了[Clash Premium Release]([Release Premium 2022.04.17 · Dreamacro/clash · GitHub](https://github.com/Dreamacro/clash/releases/tag/premium) 核心，原始版本更新功能故失效，修改了页面的版本显示及隐藏了更新按钮，采用手动更新方式
+使用了[Clash Premium Release](https://github.com/Dreamacro/clash/releases/tag/premium) 核心，原始版本更新功能故失效，修改了页面的版本显示及隐藏了更新按钮，采用手动更新方式
 
 ## 个人环境
 
