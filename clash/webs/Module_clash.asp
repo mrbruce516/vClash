@@ -194,7 +194,7 @@
                     if (typeof(res) != "undefined" && res.length > 0) {
                         var obj = res[0];
                         if (obj.name != dbus["clash_version"]) {
-                            $j("#clash_version_status").html("<i>当前版本：" + dbus["clash_version"] + "，<i>有新版本：" + obj.name);
+                            $j("#clash_version_status").html("<i>当前版本：" + dbus["clash_version"]);
                             dbus["clash_new_version"] = obj.name;
                             document.getElementById("btn_update_ver").style.display = "";
                         } else {
@@ -423,7 +423,7 @@
                                     <i>当前版本：<% dbus_get_def("clash_version", "未知" ); %></i>
                                 </div>
                                 <div id="clash_install_show" style="padding-top:5px;margin-left:330px;margin-top:-25px;">
-                                    <button id="btn_update_ver" style="display: none;" type="button" class="button_gen" onclick="update_clash_bin()" href="javascript:void(0);">更新版本</button>
+                                    <!--button id="btn_update_ver" style="display: none;" type="button" class="button_gen" onclick="update_clash_bin()" href="javascript:void(0);">更新版本</button -->
                                 </div>
                             </td>
                         </tr>

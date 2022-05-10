@@ -3,16 +3,30 @@
   <br>vClash科学上网插件<br>
 </h1>
 
+# 个人修改部分
+
+使用了[Clash Premium Release]([Release Premium 2022.04.17 · Dreamacro/clash · GitHub](https://github.com/Dreamacro/clash/releases/tag/premium) 核心，原始版本更新功能故失效，修改了页面的版本显示及隐藏了更新按钮，采用手动更新方式
+
+## 个人环境
+
+| 设备            | 架构    |
+| ------------- | ----- |
+| Asus RT-AC86U | ARMV8 |
+
+更新版本后需要通过dbus修改clash版本变量，达到修改页面版本号目的
+
+```bash
+dbus set clash_version="Premium 2022.04.17"
+```
+
 # vClash项目说明
->这个项目插件适用于`Koolshare的华硕官改、梅林改版 380/384/386固件`。会不会有openwrt版本呢？有时间再考虑吧。
 
+> 这个项目插件适用于`Koolshare的华硕官改、梅林改版 380/384/386固件`。会不会有openwrt版本呢？有时间再考虑吧。
 
-| Github分支    | 支持Koolshare路由器固件版本 | Github下载链接                                                                                                                                                                        | 国内CDN下载链接                                                                                             |
-| ----------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| main        | 华硕380版本(停止更新)            | [斐迅K3梅林380版本](https://github.com/learnhard-cn/vClash/raw/main/release/clash.tar.gz)                     | [斐迅K3梅林380版本](https://cdn.jsdelivr.net/gh/learnhard-cn/vClash@main/release/clash.tar.gz)              |
-| ksmerlin386 | 华硕官改、梅林386版本(持续更新)       | [华硕RT-AC86U梅林386版本](https://github.com/learnhard-cn/vClash/raw/ksmerlin386/release/clash.tar.gz) | [华硕RT-AC86U梅林386版本](https://cdn.jsdelivr.net/gh/learnhard-cn/vClash@ksmerlin386/release/clash.tar.gz) |
-
-
+| Github分支    | 支持Koolshare路由器固件版本 | Github下载链接                                                                                       | 国内CDN下载链接                                                                                             |
+| ----------- | ------------------ | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| main        | 华硕380版本(停止更新)      | [斐迅K3梅林380版本](https://github.com/learnhard-cn/vClash/raw/main/release/clash.tar.gz)              | [斐迅K3梅林380版本](https://cdn.jsdelivr.net/gh/learnhard-cn/vClash@main/release/clash.tar.gz)              |
+| ksmerlin386 | 华硕官改、梅林386版本(持续更新) | [华硕RT-AC86U梅林386版本](https://github.com/learnhard-cn/vClash/raw/ksmerlin386/release/clash.tar.gz) | [华硕RT-AC86U梅林386版本](https://cdn.jsdelivr.net/gh/learnhard-cn/vClash@ksmerlin386/release/clash.tar.gz) |
 
 ## 功能特点介绍
 
@@ -21,13 +35,12 @@
 - 内置Cloudflare的DDNS功能，支持<b style="color:red">同时更新多个域名</b>。
 
 ## 使用前说明
+
 > 由于GoLang版本Clash启动时分配内存空间较大，对于小内存路由器最容易出现**启动失败问题**,以`RT-AC86U`为例，启动时分配虚拟内存(VIRT)有600-700MB左右，对于512MB物理内存路由器直接起不来。
 
 启动失败问题解决：
 
 1. 挂载虚拟内存: 支持**USB接口路由器**可以插入一个1GB以上的优盘作为虚拟内存挂载，可以使用路由器自带了虚拟内存插件。[阅读挂载虚拟内存教程文章](https://vlike.work/VPS/router-mount-swap.html)。
-
-
 
 ## 为什么有这个项目
 
@@ -49,8 +62,6 @@
 
 That's it! The open source project！
 
-
 ## 主界面
 
 ![](./images/demo.png)
-
